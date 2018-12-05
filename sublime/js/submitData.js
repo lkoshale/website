@@ -224,7 +224,7 @@ function loadTopics(){
 
 function ViewScore(){
     var class1 = document.getElementById("sel1").value ;
-    alert("here!!");
+
     var cval = parseInt(class1.trim());
 
     var topic = document.getElementById("sel2").value ;
