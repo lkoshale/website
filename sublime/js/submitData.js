@@ -231,7 +231,7 @@ function ViewScore(){
 
     firebase.database().ref('Users/schoolXYZ/').once('value', function(snap){
         var user = snap.val();
-        document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Class</th></tr>";
+        document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Score</th></tr>";
        
         for (var key in user) {
             if (user.hasOwnProperty(key)) {
