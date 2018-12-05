@@ -53,7 +53,8 @@ function submitData(){
                 "schoolClass":classVal,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             });
         }
         else if(name2==="" && class2==="" && mob2===""){
@@ -67,7 +68,8 @@ function submitData(){
                 "schoolClass":classVal1,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             });
 
             var classVal2 = parseInt(class2.trim());
@@ -77,7 +79,8 @@ function submitData(){
                 "schoolClass":classVal2,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             }); 
         }
         else {
@@ -91,7 +94,8 @@ function submitData(){
                 "schoolClass":classVal1,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             });
 
             var classVal2 = parseInt(class2.trim());
@@ -101,7 +105,8 @@ function submitData(){
                 "schoolClass":classVal2,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             }); 
 
             var classVal3 = parseInt(class3.trim());
@@ -111,7 +116,8 @@ function submitData(){
                 "schoolClass":classVal3,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             }); 
 
         }
@@ -156,9 +162,39 @@ function addData(name,class1,mobile,row){
                 "schoolClass":classVal,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test" : []
             });
         }
         // console.log(JSON.stringify(user.schoolXYZ));
     });
+}
+
+
+function ViewData(){
+    var class1 = document.getElementById("sel1").value ;
+    alert("here!!");
+    var cval = parseInt(class1.trim());
+    var database = firebase.database();
+    database.ref('Users/schoolXYZ/').once('value', function(snap){
+        var user = snap.val();
+        document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Class</th></tr>";
+       
+        for (var key in user) {
+            if (user.hasOwnProperty(key)) {
+              var val = user[key];
+              if(val.hasOwnProperty('schoolClass')){
+                  if(val['schoolClass']==cval){
+                      var str= "<tr>";
+                      str+="<td> "+val['name']+"</td>";
+                      str+="<td> "+key+"</td>";
+                      str+="<td> "+cval+"</td> </tr>";
+                      document.getElementById("tableData").innerHTML+=str;
+                  }
+              }
+            }
+        }
+    
+    });
+
 }
