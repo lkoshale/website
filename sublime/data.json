@@ -134,7 +134,11 @@
                 "schoolClass":6,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",        
+                "test":{
+                    "Brain":8,
+                    "Skeleton":2
+                }
             },
 
             "9705608870":{
@@ -143,7 +147,11 @@
                 "schoolClass":6,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":10,
+                    "Skeleton":10
+                }
             },
 
             "9666247520":{
@@ -152,7 +160,10 @@
                 "schoolClass":9,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":2
+                }
             },
 
             "9177795307": {
@@ -161,7 +172,11 @@
                 "schoolClass":6,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":7,
+                    "Skeleton":1
+                }
             },
 
             "9790756214":{
@@ -170,7 +185,10 @@
                 "schoolClass":7,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":7
+                }
             },
 
             "8341148578":{
@@ -179,7 +197,10 @@
                 "schoolClass":8,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":7
+                }
             },
 
             "7981784924":{
@@ -188,7 +209,11 @@
                 "schoolClass":6,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":6,
+                    "Skeleton":10
+                }
             },
 
             "7989826649": {
@@ -197,7 +222,12 @@
                 "schoolClass":6,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":8,
+                    "Skeleton":9
+                }
+
             },
     
             "9581279280":{
@@ -206,7 +236,11 @@
                 "schoolClass":6,
                 "SysID":"",
                 "Model":"",
-                "isLog":""
+                "isLog":"",
+                "test":{
+                    "Brain":5,
+                    "Skeleton":1
+                }
             }
     
 

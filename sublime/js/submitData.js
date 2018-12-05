@@ -173,7 +173,7 @@ function addData(name,class1,mobile,row){
 
 function ViewData(){
     var class1 = document.getElementById("sel1").value ;
-    alert("here!!");
+    
     var cval = parseInt(class1.trim());
     var database = firebase.database();
     database.ref('Users/schoolXYZ/').once('value', function(snap){
@@ -196,5 +196,61 @@ function ViewData(){
         }
     
     });
+
+}
+
+function loadTopics(){
+    var class1 = document.getElementById("sel1").value ;
+    var database = firebase.database();
+    document.getElementById("sel2").innerHTML="";
+    database.ref('/').once('value', function(snap){
+        var root = snap.val();
+        
+        if(root.hasOwnProperty(class1.trim())){
+            
+            var val = root[class1.trim()];
+            for(var key in val){
+                // console.log(key);
+                if(val.hasOwnProperty(key)){
+                    var str= "<option>"+key+"</option>";
+                    document.getElementById("sel2").innerHTML+=str;
+                }
+            }
+        }
+            // console.log("class not there!!"+class1)
+        
+    });
+}
+
+function ViewScore(){
+    var class1 = document.getElementById("sel1").value ;
+    alert("here!!");
+    var cval = parseInt(class1.trim());
+
+    var topic = document.getElementById("sel2").value ;
+
+    firebase.database().ref('Users/schoolXYZ/').once('value', function(snap){
+        var user = snap.val();
+        document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Class</th></tr>";
+       
+        for (var key in user) {
+            if (user.hasOwnProperty(key)) {
+              var val = user[key];
+              if(val.hasOwnProperty('schoolClass') && val.hasOwnProperty("test")){
+                  var test = val["test"];
+                  if(val['schoolClass']==cval && test.hasOwnProperty(topic.trim())){
+                      var str= "<tr>";
+                      str+="<td> "+val['name']+"</td>";
+                      str+="<td> "+key+"</td>";
+                      str+="<td> "+test[topic.trim()]+"</td> </tr>";
+                      document.getElementById("tableData").innerHTML+=str;
+                  }
+              }
+            }
+        }
+    
+    });
+
+
 
 }

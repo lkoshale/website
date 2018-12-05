@@ -86,16 +86,23 @@
       <div class="row">
             <div class="form-group" >
                 <label for="sel1" style="display:inline;margin:2%;">Select Class:</label>
-                <select class="form-control" id="sel1" style="display:inline;width:20%;">
+                <select class="form-control" id="sel1" style="display:inline;width:20%;" onchange="loadTopics()">
                     <option >6</option>
                     <option >7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
+                    <option >8</option>
+                    <option >9</option>
+                    <option >10</option>
+                    <option >11</option>
+                    <option >12</option>
                 </select>
-                <input type="button" value="View Students" class="btn btn-primary" style="display: inline;margin-left:3%" onclick="ViewData()">
+
+                <label for="sel2" style="display:inline;margin:2%;"> Topics </label>
+                <select class="form-control" id="sel2" style="display:inline;width:20%;">
+                        <option>Brain</option>
+                        <option>Skeleton</option>
+                </select>
+                
+                <input type="button" value="View Students" class="btn btn-primary" style="display: inline;margin-left:3%" onclick="ViewScore()">
             </div>
 
             <div class="table-responsive ">
@@ -104,7 +111,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Mobile</th> 
-                            <th>Class</th>
+                            <th>Score</th>
                         </tr>
                 </table>
             </div>
