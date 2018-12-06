@@ -29,7 +29,8 @@ function submitData(){
     }
 
     var database = firebase.database();
-    database.ref('Users/schoolXYZ/').once('value', function(snap){
+    var schoolName = sessionStorage.getItem('edarSCHOOL');
+    database.ref('Users/'+schoolName).once('value', function(snap){
         var user = snap.val();
         if(user.hasOwnProperty(mob1.trim())){
             alert("the mobile number at row 1st already exists!! \n if you want to update details\n go to update page");
@@ -47,7 +48,7 @@ function submitData(){
         if(name3==="" && class3==="" && mob3==="" && name2==="" && class2==="" && mob2===""){
             if(!checkPhone(mob1,"1")) return;
             var classVal = parseInt(class1.trim());
-            database.ref('Users/schoolXYZ/'+mob1).set({
+            database.ref('Users/'+schoolName+'/'+mob1).set({
                 "name":name1.trim(),
                 "Class":[classVal],
                 "schoolClass":classVal,
@@ -62,7 +63,7 @@ function submitData(){
             if(!checkPhone(mob2,"2")) return;
 
             var classVal1 = parseInt(class1.trim());
-            database.ref('Users/schoolXYZ/'+mob1).set({
+            database.ref('Users/'+schoolName+'/'+mob1).set({
                 "name":name1.trim(),
                 "Class":[classVal1],
                 "schoolClass":classVal1,
@@ -73,7 +74,7 @@ function submitData(){
             });
 
             var classVal2 = parseInt(class2.trim());
-            database.ref('Users/schoolXYZ/'+mob2).set({
+            database.ref('Users/'+schoolName+'/'+mob2).set({
                 "name":name2.trim(),
                 "Class":[classVal2],
                 "schoolClass":classVal2,
@@ -88,7 +89,7 @@ function submitData(){
             if(!checkPhone(mob2,"2")) return;
             if(!checkPhone(mob3,"3")) return;
             var classVal1 = parseInt(class1.trim());
-            database.ref('Users/schoolXYZ/'+mob1).set({
+            database.ref('Users/'+schoolName+'/'+mob1).set({
                 "name":name1.trim(),
                 "Class":[classVal1],
                 "schoolClass":classVal1,
@@ -99,7 +100,7 @@ function submitData(){
             });
 
             var classVal2 = parseInt(class2.trim());
-            database.ref('Users/schoolXYZ/'+mob2).set({
+            database.ref('Users/'+schoolName+'/'+mob2).set({
                 "name":name2.trim(),
                 "Class":[classVal2],
                 "schoolClass":classVal2,
@@ -110,7 +111,7 @@ function submitData(){
             }); 
 
             var classVal3 = parseInt(class3.trim());
-            database.ref('Users/schoolXYZ/'+mob3).set({
+            database.ref('Users/'+schoolName+'/'+mob3).set({
                 "name":name3.trim(),
                 "Class":[classVal3],
                 "schoolClass":classVal3,
@@ -148,15 +149,16 @@ function checkPhone(mob1,row){
 
 function addData(name,class1,mobile,row){
 
+    var schoolName = sessionStorage.getItem('edarSCHOOL');
     var database = firebase.database();
-    database.ref('Users/schoolXYZ/').once('value', function(snap){
+    database.ref('Users/'+schoolName).once('value', function(snap){
         var user = snap.val();
         if(user.hasOwnProperty(mob1.trim())){
             alert("the mobile number already exists!! \n if you want to update details\n go to update page");
         }
         else{
             var classVal = parseInt(class1.trim());
-            database.ref('Users/schoolXYZ/'+mob1).set({
+            database.ref(+mob1).set({
                 "name":name1.trim(),
                 "Class":[classVal],
                 "schoolClass":classVal,
@@ -173,10 +175,11 @@ function addData(name,class1,mobile,row){
 
 function ViewData(){
     var class1 = document.getElementById("sel1").value ;
+    var schoolName = sessionStorage.getItem('edarSCHOOL');
     
     var cval = parseInt(class1.trim());
     var database = firebase.database();
-    database.ref('Users/schoolXYZ/').once('value', function(snap){
+    database.ref('Users/'+schoolName).once('value', function(snap){
         var user = snap.val();
         document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Class</th></tr>";
        
@@ -203,6 +206,8 @@ function loadTopics(){
     var class1 = document.getElementById("sel1").value ;
     var database = firebase.database();
     document.getElementById("sel2").innerHTML="";
+    
+
     database.ref('/').once('value', function(snap){
         var root = snap.val();
         
@@ -229,7 +234,9 @@ function ViewScore(){
 
     var topic = document.getElementById("sel2").value ;
 
-    firebase.database().ref('Users/schoolXYZ/').once('value', function(snap){
+    var schoolName = sessionStorage.getItem('edarSCHOOL');
+
+    firebase.database().ref('Users/'+schoolName).once('value', function(snap){
         var user = snap.val();
         document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Score</th></tr>";
        

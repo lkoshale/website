@@ -1,253 +1,181 @@
 {
-    "6":
-    {
-    
-    "Brain":[
-        {
-        "que": "1.Why a new cell is formed?",
-        "options": ["to grow","to replace old, dead, injured cells","to form gametes","All the above"],
-        "correct":"3"
-        },
-        {
-        "que": "2.By which process most of the cells divide for growth?",
-        "options": ["budding","mitosis","binary fission","meiosis"],
-        "correct":"1"
-        },
-        {
-        "que": "3.In which division two identical daughter cells are formed?",
-        "options": ["Mitosis","Meiosis","Budding","None of the above"],
-        "correct":"0"
-        },
-        {
-        "que": "4.A cell contains 24 chromosomes. After mitotic division each daughter cell contains how many chromosomes?",
-        "options": ["12","48","24","46"],
-        "correct":"2"
-        },
-        {
-        "que": "5.How many consecutive divisions does meiosis involve?",
-        "options": ["2","4","1","0"],
-        "correct":"0"
-        },
-        {
-        "que": "6.In which division four daughter cells are formed?",
-        "options": ["Mitosis","Binary fission","Meiosis","Budding"],
-        "correct":"2"
-        },
-        {
-        "que": "7.Gametes are formed by which division?",
-        "options": ["Meiosis","Binary fission","Mitosis","Budding"],
-        "correct":"0"
-        },
-        {
-        "que": "8.A cell contains 46 chromosomes. After meiotic division each daughter cell contains how many chromosomes?",
-        "options": ["46","92","48","23"],
-        "correct":"3"
+  "6" : {
+    "Brain" : [ {
+      "correct" : "3",
+      "options" : [ "to grow", "to replace old, dead, injured cells", "to form gametes", "All the above" ],
+      "que" : "1.Why a new cell is formed?"
+    }, {
+      "correct" : "1",
+      "options" : [ "budding", "mitosis", "binary fission", "meiosis" ],
+      "que" : "2.By which process most of the cells divide for growth?"
+    }, {
+      "correct" : "0",
+      "options" : [ "Mitosis", "Meiosis", "Budding", "None of the above" ],
+      "que" : "3.In which division two identical daughter cells are formed?"
+    }, {
+      "correct" : "2",
+      "options" : [ "12", "48", "24", "46" ],
+      "que" : "4.A cell contains 24 chromosomes. After mitotic division each daughter cell contains how many chromosomes?"
+    }, {
+      "correct" : "0",
+      "options" : [ "2", "4", "1", "0" ],
+      "que" : "5.How many consecutive divisions does meiosis involve?"
+    }, {
+      "correct" : "2",
+      "options" : [ "Mitosis", "Binary fission", "Meiosis", "Budding" ],
+      "que" : "6.In which division four daughter cells are formed?"
+    }, {
+      "correct" : "0",
+      "options" : [ "Meiosis", "Binary fission", "Mitosis", "Budding" ],
+      "que" : "7.Gametes are formed by which division?"
+    }, {
+      "correct" : "3",
+      "options" : [ "46", "92", "48", "23" ],
+      "que" : "8.A cell contains 46 chromosomes. After meiotic division each daughter cell contains how many chromosomes?"
+    } ],
+    "Skeleton" : [ {
+      "correct" : "0",
+      "options" : [ "", "", "", "" ],
+      "que" : "No Questions for this topic!"
+    } ]
+  },
+  "7" : {
+    "Brain" : [ {
+      "correct" : 2,
+      "options" : [ "akash", "vamshi", "yashwanth", "abhishek" ],
+      "que" : "1.what is ur name?"
+    }, {
+      "correct" : 3,
+      "options" : [ "11", "12", "13", "14" ],
+      "que" : "2.whats your age?"
+    } ]
+  },
+  "8" : {
+    "Brain" : [ {
+      "correct" : 2,
+      "options" : [ "akash", "vamshi", "yashwanth", "abhishek" ],
+      "que" : "1.what is ur name?"
+    }, {
+      "correct" : 3,
+      "options" : [ "11", "12", "13", "14" ],
+      "que" : "2.whats your age?"
+    } ]
+  },
+  "9" : {
+    "Brain" : [ {
+      "correct" : 2,
+      "options" : [ "akash", "vamshi", "yashwanth", "abhishek" ],
+      "que" : "1.what is ur name?"
+    }, {
+      "correct" : 3,
+      "options" : [ "11", "12", "13", "14" ],
+      "que" : "2.whats your age?"
+    } ]
+  },
+  "10" : {
+    "Brain" : [ {
+      "correct" : 2,
+      "options" : [ "akash", "vamshi", "yashwanth", "abhishek" ],
+      "que" : "1.what is ur name?"
+    }, {
+      "correct" : 3,
+      "options" : [ "11", "12", "13", "14" ],
+      "que" : "2.whats your age?"
+    } ]
+  },
+  "Users" : {
+    "schoolABC" : {
+      "9940115571" : {
+        "Class" : [ "6", "7", "8", "9", "10" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Yashwanth Kumar Bongarala",
+        "schoolClass" : 6,
+        "test" : {
+          "testing" : "12"
         }
-        ],
-    
-        "Skeleton":[{
-        "que": "No Questions for this topic!",
-        "options": ["","","",""],
-        "correct":"0"
-        }]
+      }
     },
-    
-    "7":
-    {
-    
-    "Brain":[
-        {
-        "que": "1.what is ur name?",
-        "options": ["akash","vamshi","yashwanth","abhishek"],
-        "correct":2
-        },
-        {
-        "que": "2.whats your age?",
-        "options": ["11","12","13","14"],
-        "correct":3
+    "schoolXYZ" : {
+      "7981784924" : {
+        "Class" : [ "6" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Jyothsna",
+        "schoolClass" : 6
+      },
+      "7989826649" : {
+        "Class" : [ "6" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Manaswini",
+        "schoolClass" : 6
+      },
+      "8341148578" : {
+        "Class" : [ "6", "7", "8", "9", "10" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Abhishek",
+        "schoolClass" : 8
+      },
+      "9177795307" : {
+        "Class" : [ "6" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Jaya",
+        "schoolClass" : 6
+      },
+      "9581279280" : {
+        "Class" : [ "6" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Vanadana",
+        "schoolClass" : 6
+      },
+      "9666247520" : {
+        "Class" : [ "6", "7", "8", "9", "10" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Vamshi",
+        "schoolClass" : 9
+      },
+      "9705608870" : {
+        "Class" : [ "6" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Yaswanth",
+        "schoolClass" : 6
+      },
+      "9790756214" : {
+        "Class" : [ "6", "7", "8", "9", "10" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Lokesh",
+        "schoolClass" : 7
+      },
+      "9940115571" : {
+        "Class" : [ "6", "7", "8", "9", "10" ],
+        "Model" : "",
+        "SysID" : "",
+        "isLog" : "",
+        "name" : "Yashwanth Kumar Bongarala",
+        "schoolClass" : 6,
+        "test" : {
+          "testing" : "12"
         }
-        ]
-    
-    },
-    
-    "8":
-    {
-    
-    "Brain":[
-        {
-        "que": "1.what is ur name?",
-        "options": ["akash","vamshi","yashwanth","abhishek"],
-        "correct":2
-        },
-        {
-        "que": "2.whats your age?",
-        "options": ["11","12","13","14"],
-        "correct":3
-        }
-        ]
-    
-    },
-    
-    "9":
-    {
-    
-    "Brain":[
-        {
-        "que": "1.what is ur name?",
-        "options": ["akash","vamshi","yashwanth","abhishek"],
-        "correct":2
-        },
-        {
-        "que": "2.whats your age?",
-        "options": ["11","12","13","14"],
-        "correct":3
-        }
-        ]
-    
-    },
-    
-    "10":
-    {
-    
-    "Brain":[
-        {
-        "que": "1.what is ur name?",
-        "options": ["akash","vamshi","yashwanth","abhishek"],
-        "correct":2
-        },
-        {
-        "que": "2.whats your age?",
-        "options": ["11","12","13","14"],
-        "correct":3
-        }
-        ]
-    
-    },
-    
-    
-    "Users" :{
-        "schoolXYZ": {
-            
-            "9940115571":{
-                "name":"Yashwanth Kumar Bongarala",
-                "Class":["6","7","8","9","10"],
-                "schoolClass":6,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",        
-                "test":{
-                    "Brain":8,
-                    "Skeleton":2
-                }
-            },
-
-            "9705608870":{
-                "name":"Yaswanth",
-                "Class":["6"],
-                "schoolClass":6,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":10,
-                    "Skeleton":10
-                }
-            },
-
-            "9666247520":{
-                "name":"Vamshi",
-                "Class":["6","7","8","9","10"],
-                "schoolClass":9,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":2
-                }
-            },
-
-            "9177795307": {
-                "name":"Jaya",
-                "Class":["6"],
-                "schoolClass":6,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":7,
-                    "Skeleton":1
-                }
-            },
-
-            "9790756214":{
-                "name":"Lokesh",
-                "Class":["6","7","8","9","10"],
-                "schoolClass":7,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":7
-                }
-            },
-
-            "8341148578":{
-                "name":"Abhishek",
-                "Class":["6","7","8","9","10"],
-                "schoolClass":8,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":7
-                }
-            },
-
-            "7981784924":{
-                "name":"Jyothsna",
-                "Class":["6"],
-                "schoolClass":6,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":6,
-                    "Skeleton":10
-                }
-            },
-
-            "7989826649": {
-                "name":"Manaswini",
-                "Class":["6"],
-                "schoolClass":6,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":8,
-                    "Skeleton":9
-                }
-
-            },
-    
-            "9581279280":{
-                "name":"Vanadana",
-                "Class":["6"],
-                "schoolClass":6,
-                "SysID":"",
-                "Model":"",
-                "isLog":"",
-                "test":{
-                    "Brain":5,
-                    "Skeleton":1
-                }
-            }
-    
-
-        },
-
-        "schoolABC":{}
-
+      }
     }
-    
+  },
+
+  "SchoolCred":[ {"username":"schoolXYZ","password":"12345","name":"school XYZ pvt ltd"},{"username":"schoolABC","password":"12345","name":"school ABC pvt ltd"}]
+
 }
