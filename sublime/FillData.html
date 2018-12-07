@@ -50,12 +50,14 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
+            
             <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="tour.html">Tour</a></li>
-            <li><a href="login.html">Log in</a></li>
-            <li class="probootstrap-cta"><a href="signup.html">Sign up</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li> -->
+            <li><a href="ViewData.html">View Students</a></li>
+            <!-- <li><a href="tour.html">Tour</a></li> -->
+            <li><a href="FillData.html">Fill Data</a></li>
+            <li><a href="SchoolStat.html">Statstics</a></li>
+          
           </ul>
           <div class="extra-text visible-xs">
             <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -80,7 +82,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center section-heading">
-          <script> var schoolName = sessionStorage.getItem('edarSCHOOLName'); document.write("<h2> WELCOME "+schoolName+"</h2>");</script>
+          <script> var schoolName = sessionStorage.getItem('edarSCHOOLName'); 
+          if(schoolName==null){
+              window.location.href = "index.html";
+          }
+          document.write("<h2> WELCOME "+schoolName+"</h2>");</script>
         </div>
       </div>
       <div class="row">

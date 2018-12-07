@@ -93,7 +93,7 @@
         "name" : "Yashwanth Kumar Bongarala",
         "schoolClass" : 6,
         "test" : {
-          "testing" : "12"
+          "Brain" : 9
         }
       }
     },
@@ -104,7 +104,11 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Jyothsna",
-        "schoolClass" : 6
+        "schoolClass" : 6,
+        "test":{
+          "Brain":5,
+          "Skeleton":8
+        }
       },
       "7989826649" : {
         "Class" : [ "6" ],
@@ -112,7 +116,11 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Manaswini",
-        "schoolClass" : 6
+        "schoolClass" : 6,
+        "test":{
+          "Brain":1,
+          "Skeleton":9
+        }
       },
       "8341148578" : {
         "Class" : [ "6", "7", "8", "9", "10" ],
@@ -120,7 +128,10 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Abhishek",
-        "schoolClass" : 8
+        "schoolClass" : 8,
+        "test":{
+          "Brain":4
+        }
       },
       "9177795307" : {
         "Class" : [ "6" ],
@@ -128,7 +139,11 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Jaya",
-        "schoolClass" : 6
+        "schoolClass" : 6,
+        "test":{
+          "Brain":8,
+          "Skeleton":9
+        }
       },
       "9581279280" : {
         "Class" : [ "6" ],
@@ -136,7 +151,11 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Vanadana",
-        "schoolClass" : 6
+        "schoolClass" : 6,
+        "test":{
+          "Brain":7,
+          "Skeleton":3
+        }
       },
       "9666247520" : {
         "Class" : [ "6", "7", "8", "9", "10" ],
@@ -144,7 +163,10 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Vamshi",
-        "schoolClass" : 9
+        "schoolClass" : 9,
+        "test":{
+          "Brain":2
+        }
       },
       "9705608870" : {
         "Class" : [ "6" ],
@@ -152,7 +174,11 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Yaswanth",
-        "schoolClass" : 6
+        "schoolClass" : 6,
+        "test":{
+          "Brain":6,
+          "Skeleton":9
+        }
       },
       "9790756214" : {
         "Class" : [ "6", "7", "8", "9", "10" ],
@@ -160,7 +186,10 @@
         "SysID" : "",
         "isLog" : "",
         "name" : "Lokesh",
-        "schoolClass" : 7
+        "schoolClass" : 7,
+        "test":{
+          "Brain":9
+        }
       },
       "9940115571" : {
         "Class" : [ "6", "7", "8", "9", "10" ],
@@ -169,8 +198,9 @@
         "isLog" : "",
         "name" : "Yashwanth Kumar Bongarala",
         "schoolClass" : 6,
-        "test" : {
-          "testing" : "12"
+        "test":{
+          "Brain":8,
+          "Skeleton":9
         }
       }
     }

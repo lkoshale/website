@@ -30,6 +30,11 @@ function submitData(){
 
     var database = firebase.database();
     var schoolName = sessionStorage.getItem('edarSCHOOL');
+
+    if(schoolName==null){
+        window.location.href = "index.html";
+    }
+
     database.ref('Users/'+schoolName).once('value', function(snap){
         var user = snap.val();
         if(user.hasOwnProperty(mob1.trim())){
@@ -236,10 +241,13 @@ function ViewScore(){
 
     var schoolName = sessionStorage.getItem('edarSCHOOL');
 
-    firebase.database().ref('Users/'+schoolName).once('value', function(snap){
-        var user = snap.val();
+    var scores=[];
+
+    firebase.database().ref('/Users/'+schoolName).once('value', function(snap){
+        var root = snap.val();
+        var user = root;
         document.getElementById("tableData").innerHTML = "<tr><th>Name</th><th>Mobile</th><th>Score</th></tr>";
-       
+        
         for (var key in user) {
             if (user.hasOwnProperty(key)) {
               var val = user[key];
@@ -251,13 +259,65 @@ function ViewScore(){
                       str+="<td> "+key+"</td>";
                       str+="<td> "+test[topic.trim()]+"</td> </tr>";
                       document.getElementById("tableData").innerHTML+=str;
+                      scores.push(test[topic.trim()]);
                   }
               }
             }
         }
+       // console.log(scores);
+
+        var sum =0;
+        for(var i=0;i<scores.length;i+=1){ sum+=scores[i]; }
+        var mean = (sum*1.0)/(scores.length);
+        var max = 0;
+        for(var i=0;i<scores.length;i+=1){ if(scores[i]>max) max = scores[i]; }
+        var min = 100;
+        for(var i=0;i<scores.length;i+=1){ if(scores[i]<min) min = scores[i]; }
+        // console.log(sum+" "+mean+" "+max);
+    
+        ViewGraph(min,mean,max,scores);
+
     
     });
+    
+}
 
+function ViewGraph(min,mean,max,scores){
+    var ctx = document.getElementById("myChart").getContext('2d');
 
+    var chart = new Chart(ctx, {
+         type: 'bar',
+    data: {
+        labels: ["Min", "Median", "Max"],
+        datasets: [{
+            label: '# marks stats',
+            data: [min, mean, max],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+
+        responsive:false,
+        
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+    
+    });
 
 }

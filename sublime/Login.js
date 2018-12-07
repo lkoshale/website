@@ -29,8 +29,10 @@ function LogIN(){
             if(id===cid && pd == cpwd){
                 sessionStorage.setItem('edarSCHOOL', root[x]['username']);
                 sessionStorage.setItem('edarSCHOOLName', root[x]['name']);
+                // localStorage.setItem('edarSCHOOL', root[x]['username']);
+                // localStorage.setItem('edarSCHOOLName', root[x]['name']);
                 console.log("redirect");
-                window.location.href = "file:///home/lokesh/Work/Edar_Web/website/sublime/FillData.html";
+                window.location.href = "FillData.html";
             }
         }
     
