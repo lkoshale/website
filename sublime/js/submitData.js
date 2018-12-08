@@ -129,17 +129,9 @@ function submitData(){
         }
 
         document.getElementById("success").style.visibility = "visible";
-        // console.log(JSON.stringify(user.schoolXYZ));
+        
     });
 
-    
-    /*
- firebase.database().ref('users/' + userId).set({
-    username: name,
-    email: email,
-    profile_picture : imageUrl
-  });
-    */
 }
 
 
@@ -173,7 +165,7 @@ function addData(name,class1,mobile,row){
                 "test" : []
             });
         }
-        // console.log(JSON.stringify(user.schoolXYZ));
+    
     });
 }
 
@@ -220,14 +212,14 @@ function loadTopics(){
             
             var val = root[class1.trim()];
             for(var key in val){
-                // console.log(key);
+                
                 if(val.hasOwnProperty(key)){
                     var str= "<option>"+key+"</option>";
                     document.getElementById("sel2").innerHTML+=str;
                 }
             }
         }
-            // console.log("class not there!!"+class1)
+            
         
     });
 }
@@ -273,7 +265,7 @@ function ViewScore(){
         for(var i=0;i<scores.length;i+=1){ if(scores[i]>max) max = scores[i]; }
         var min = 100;
         for(var i=0;i<scores.length;i+=1){ if(scores[i]<min) min = scores[i]; }
-        // console.log(sum+" "+mean+" "+max);
+        
     
         ViewGraph(min,mean,max,scores);
 
