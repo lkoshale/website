@@ -32,7 +32,7 @@ function LogIN(){
                 // localStorage.setItem('edarSCHOOL', root[x]['username']);
                 // localStorage.setItem('edarSCHOOLName', root[x]['name']);
                 console.log("redirect");
-                window.location.href = "FillData.html";
+                window.location.href = "ViewData.html";
             }
         }
     
