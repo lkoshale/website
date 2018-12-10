@@ -2,24 +2,42 @@
 <html lang="en">
   <head>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
     <title>edAR Revamp the learning</title>
     <meta name="description" content="The world of learning">
     <meta name="keywords" content="Education, Augmented reality, Simulation, Schools">
-
+    
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/custom.css">
 
-    <script src="Login.js"></script>
-
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
+    
+    <script>
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var config = {
+            apiKey: "AIzaSyCsOUfZEBAhTB9HwaTxAlxBDEgw6R1O20s",
+            authDomain: "edar-v1.firebaseapp.com",
+            databaseURL: "https://edar-v1.firebaseio.com",
+            projectId: "edar-v1",
+            storageBucket: "<BUCKET>.appspot.com",
+            messagingSenderId: "<SENDER_ID>",
+        };
+        firebase.initializeApp(config);
+    
+    </script>
+    <script src="js/fillQnA.js" ></script>
+
+  
+
   </head>
   <body>
     
@@ -37,11 +55,11 @@
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <!-- <li><a href="pricing.html">Pricing</a></li> -->
-            <li><a href="#">Tour</a></li>
-            <li><a href="login.html">Log in</a></li>
-            <!-- <li class="probootstrap-cta"><a href="signup.html">Sign up</a></li> -->
+            <!-- <li><a href="blog.html">Blog</a></li> -->
+            <li><a href="ViewData.html">View Students</a></li>
+            <!-- <li><a href="tour.html">Tour</a></li> -->
+            <li><a href="FillData.html">Fill Data</a></li>
+            <li><a href="SchoolStat.html">Statstics</a></li>
           </ul>
           <div class="extra-text visible-xs">
             <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -51,7 +69,7 @@
               <li><a href="#"><i class="icon-facebook"></i></a></li>
               <li><a href="#"><i class="icon-instagram2"></i></a></li>
             </ul>
-            <p><small>&copy; Copyright 2017. All Rights Reserved.</small></p>
+            <p><small>&copy; Copyright 2018. All Rights Reserved.</small></p>
           </div>
         </nav>
 
@@ -64,33 +82,56 @@
   
   <section class="probootstrap-section">
     <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12 text-center section-heading">
-          <h2>Log in</h2>
+          <script> var schoolName = sessionStorage.getItem('edarSCHOOLName'); 
+          if(schoolName==null){
+              window.location.href = "index.html";
+          }
+          document.write("<h2> WELCOME "+schoolName+"</h2>");</script>
         </div>
-      </div>
+      </div> -->
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <form method="post" class="probootstrap-form probootstrap-form-box">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="username" name="username" id="username" class="form-control">
+            <div class="form-group" >
+                <label for="sel1" style="display:inline;margin:2%;">Select Class:</label>
+                <select class="form-control" id="sel1" style="display:inline;width:20%;">
+                    <option >6</option>
+                    <option >7</option>
+                    <option >8</option>
+                    <option >9</option>
+                    <option >10</option>
+                </select>
+
+                <label  style="display:inline;margin:2%;"> Topic Name </label>
+                <input type="text" id="topicN" class="form-control" style="display:inline;width:20%;" >
+                
             </div>
-            <div class="form-group">
-              <label for="username">Password</label>
-              <input type="password" name="password" id="password" class="form-control">
-            </div>
-            <div class="form-group mb50">
-              <input type="button" value="Log in" class="btn btn-primary btn-block" onclick="LogIN()">
-            </div>
-            <div class="form-group text-center">
-              <p class="form-note-link"><small><a href="index.html">Don't have an account? Contact Us</a></small> <br> <small><a href="#">Forgot password?</a></small></p>
-            </div>
-          </form>
+
+          
         </div>
-      </div>
+             <div class="form-group" >
+                <!-- <p >Paste the text here with: following discription <br>
+                    1.Question<br> option1 <br>option2 <br>option3 <br>option4
+                     <br> correct option <br> nextquestion following above pattern <p> -->
+                <label  > Paste text here (format as in text file)</label> 
+                <!-- <input type="text" id="textVal"  class="form-control" style="height: 20em;" > -->
+                <textarea id="textVal" style="display:block;height:20em;width:100%;"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Submit" class="btn btn-primary" style=" margin:2%; display: inline;margin-left:3%" onclick="fillQnA()">
+            </div>
+
     </div>
   </section>
+
+
+            
+
+        
+          
+  
+
+  <canvas id="myChart" width="200" height="100"></canvas>
   
   
   <!-- START: footer -->

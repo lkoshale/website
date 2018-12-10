@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>edAR Revamp the learning</title>
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
     <meta name="description" content="The world of learning">
     <meta name="keywords" content="Education, Augmented reality, Simulation, Schools">
     
@@ -94,6 +95,7 @@
             <div class="form-group" >
                 <label for="sel1" style="display:inline;margin:2%;">Select Class:</label>
                 <select class="form-control" id="sel1" style="display:inline;width:20%;" onchange="loadTopics()">
+                    <option>--select class--</option>
                     <option >6</option>
                     <option >7</option>
                     <option >8</option>
@@ -105,8 +107,7 @@
 
                 <label for="sel2" style="display:inline;margin:2%;"> Topics </label>
                 <select class="form-control" id="sel2" style="display:inline;width:20%;">
-                        <option>Brain</option>
-                        <option>Skeleton</option>
+                        <option>--select topic--</option>
                 </select>
                 
                 <input type="button" value="View Students" class="btn btn-primary" style="display: inline;margin-left:3%" onclick="ViewScore()">
@@ -132,7 +133,7 @@
     </div>
   </section>
 
-  <canvas id="myChart" width="200" height="100"></canvas>
+  <!-- <canvas id="myChart" width="200" height="100"></canvas> -->
   
   
   <!-- START: footer -->
